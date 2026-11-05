@@ -30,7 +30,7 @@ public class U3A4DLoadFile {
 					String blood = partsOfName[1];
 					String wand = partsOfName[2];
 					String lineage = partsOfName[3];
-					students.add(new Wizard(house, blood, wand, lineage));
+					wizards.add(new Wizard(house, blood, wand, lineage));
 				}
 		
 			}
