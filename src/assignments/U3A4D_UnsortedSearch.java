@@ -27,7 +27,7 @@ public class U3A4D_UnsortedSearch 	{
 	}
 	
 	
-	// DESCRIPTION - Returns index of House object that corrresponds to the brand if it dosen't it returns -1
+	// DESCRIPTION - Returns index of House object that corrresponds to the house if it dosen't it returns -1
 	// PARAMETERS - (Wizard[] a, String house, int index)
 	// RETURN TYPE - int
 	public static int searchHouse (Wizard[] a, String house, int index) {
@@ -41,7 +41,7 @@ public class U3A4D_UnsortedSearch 	{
 		return searchHouse(a,house, index+1);
 	}
 	
-	// DESCRIPTION - Returns index of Blood object that corrresponds to the brand if it dosen't it returns -1
+	// DESCRIPTION - Returns index of Blood object that corrresponds to the house if it dosen't it returns -1
 	// PARAMETERS - Wizard[] a, String blood, int index) {
 	// RETURN TYPE - int
 	
@@ -56,7 +56,7 @@ public class U3A4D_UnsortedSearch 	{
 		return searchBlood(a,blood, index+1);
 	}
 	
-	// DESCRIPTION - Returns index of Wizard object that corrresponds to the brand if it dosen't it returns -1
+	// DESCRIPTION - Returns index of Wizard object that corrresponds to the house if it dosen't it returns -1
 	// PARAMETERS - Wizard[] a, String wand, int index) {
 	// RETURN TYPE - int
 	
