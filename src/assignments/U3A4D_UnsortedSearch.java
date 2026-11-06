@@ -25,4 +25,49 @@ public class U3A4D_UnsortedSearch 	{
 
 		return searchWizardsRecursive(array, searchPattern, index + 1);
 	}
+	
+	
+	// DESCRIPTION - Returns index of House object that corrresponds to the brand if it dosen't it returns -1
+	// PARAMETERS - (Wizard[] a, String house, int index)
+	// RETURN TYPE - int
+	public static int searchHouse (Wizard[] a, String house, int index) {
+		
+		if(index > a.length-1)
+			return -1;
+		
+		if (a[index].getIdentifier().equalsIgnoreCase(house))
+			return index;
+		
+		return searchHouse(a,house, index+1);
+	}
+	
+	// DESCRIPTION - Returns index of Blood object that corrresponds to the brand if it dosen't it returns -1
+	// PARAMETERS - Wizard[] a, String blood, int index) {
+	// RETURN TYPE - int
+	
+	public static int searchBlood (Wizard[] a, String blood, int index) {
+		
+		if(index > a.length-1)
+			return -1;
+		
+		if (a[index].getBlood().equalsIgnoreCase(blood))
+			return index;
+		
+		return searchBlood(a,blood, index+1);
+	}
+	
+	// DESCRIPTION - Returns index of Wizard object that corrresponds to the brand if it dosen't it returns -1
+	// PARAMETERS - Wizard[] a, String wand, int index) {
+	// RETURN TYPE - int
+	
+	public static int searchWand (Wizard[] a, String wand, int index) {
+		
+		if(index > a.length-1)
+			return -1;
+		
+		if (a[index].getWand().equalsIgnoreCase(wand))
+			return index;
+		
+		return searchBlood(a,wand, index+1);
+	}
 }
