@@ -4,10 +4,6 @@ import java.io.*;
 
 public class U3A4D_UnsortedSearch 	{
 
-	// DESCRIPTION - recursive linear search on an unsorted WizardingWorld array.
-	// PARAMETERS - WizardingWorld[] array, String searchPattern, int index
-	// RETURN TYPE - int 
-
 	// DESCRIPTION - Returns index of House object that corrresponds to the house if it dosen't it returns -1
 	// PARAMETERS - (Wizard[] a, String house, int index)
 	// RETURN TYPE - int
