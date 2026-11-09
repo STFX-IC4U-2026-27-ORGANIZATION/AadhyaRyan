@@ -17,7 +17,6 @@ public class U3A4D_SearchApplication {
 			return wandNum;
 		} else if (lineageNum != -1)
 			return lineageNum;
-		
 		else return -1;
 		
 	}

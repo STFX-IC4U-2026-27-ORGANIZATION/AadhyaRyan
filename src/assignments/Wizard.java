@@ -26,12 +26,12 @@ public class Wizard {
 	}
 	
 	// house getter
-	public String getIdentifier() {
+	public String getHouse() {
 		return this.house;
 	}
 	
 	// house setter
-	public void setIdentifier(String h) {
+	public void setHouse(String h) {
 		this.house = h;
 	}
 	

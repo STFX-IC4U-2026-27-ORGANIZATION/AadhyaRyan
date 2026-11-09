@@ -16,7 +16,7 @@ public class U3A4D_UnsortedSearch 	{
 		if(index > a.length-1)
 			return -1;
 		
-		if (a[index].getIdentifier().equalsIgnoreCase(house))
+		if (a[index].getHouse().equalsIgnoreCase(house))
 			return index;
 		
 		return searchHouse(a,house, index+1);
