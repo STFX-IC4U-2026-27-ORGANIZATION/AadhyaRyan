@@ -7,26 +7,7 @@ public class U3A4D_UnsortedSearch 	{
 	// DESCRIPTION - recursive linear search on an unsorted WizardingWorld array.
 	// PARAMETERS - WizardingWorld[] array, String searchPattern, int index
 	// RETURN TYPE - int 
-	public static int searchWizardsRecursive(Wizard[] array, String searchPattern, int index) {
-		if (array == null || index >= array.length) {
-			return -1;
-		}
 
-		String pattern = searchPattern;
-
-		if (array[index] != null) {
-			if (array[index].house.equalsIgnoreCase(pattern) ||
-				array[index].blood.equalsIgnoreCase(pattern) ||
-				array[index].wand.equalsIgnoreCase(pattern) ||
-				array[index].lineage.equalsIgnoreCase(pattern)) {
-				return index;
-			}
-		}
-
-		return searchWizardsRecursive(array, searchPattern, index + 1);
-	}
-	
-	
 	// DESCRIPTION - Returns index of House object that corrresponds to the house if it dosen't it returns -1
 	// PARAMETERS - (Wizard[] a, String house, int index)
 	// RETURN TYPE - int
@@ -56,7 +37,11 @@ public class U3A4D_UnsortedSearch 	{
 		return searchBlood(a,blood, index+1);
 	}
 	
+<<<<<<< HEAD
 	// DESCRIPTION - Returns index of wand object that corrresponds to the wand if it dosen't it returns -1
+=======
+	// DESCRIPTION - Returns index of Wizard object that corresponds to the house if it dosen't it returns -1
+>>>>>>> branch 'main' of https://github.com/STFX-IC4U-2026-27-ORGANIZATION/AadhyaRyan.git
 	// PARAMETERS - Wizard[] a, String wand, int index) {
 	// RETURN TYPE - int
 	
@@ -69,5 +54,24 @@ public class U3A4D_UnsortedSearch 	{
 			return index;
 		
 		return searchBlood(a,wand, index+1);
+	}
+	
+	// DESCRIPTION - Returns the index of the first wizard in the array that has that lineage
+	//PARAMETERS - Wizard[] w, String lineage, int index
+	// RETURN TYPE - int
+	
+	public static int searchLineage(Wizard[] w, String lineage, int index) {
+		
+		// error case
+		if (w == null || index < 0 || index >= w.length || w[index] == null)
+			return -1;
+
+		// base case
+		if (w[index].getLineage().equalsIgnoreCase(lineage))
+			return index;
+	
+		else
+			return searchLineage(w, lineage, index+1);
+
 	}
 }
