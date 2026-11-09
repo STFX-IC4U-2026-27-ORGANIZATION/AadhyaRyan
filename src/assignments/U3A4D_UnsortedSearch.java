@@ -36,12 +36,8 @@ public class U3A4D_UnsortedSearch 	{
 		
 		return searchBlood(a,blood, index+1);
 	}
-	
-<<<<<<< HEAD
+
 	// DESCRIPTION - Returns index of wand object that corrresponds to the wand if it dosen't it returns -1
-=======
-	// DESCRIPTION - Returns index of Wizard object that corresponds to the house if it dosen't it returns -1
->>>>>>> branch 'main' of https://github.com/STFX-IC4U-2026-27-ORGANIZATION/AadhyaRyan.git
 	// PARAMETERS - Wizard[] a, String wand, int index) {
 	// RETURN TYPE - int
 	
