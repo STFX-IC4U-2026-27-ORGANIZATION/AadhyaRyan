@@ -13,7 +13,7 @@ public class U3A4DLoadFile {
 
 	}
 	
-	public Wizard[] loadWizardsFromFile(String fileName) {
+	public static Wizard[] loadWizardsFromFile(String fileName) {
 
 			BufferedReader br = null;
 			ArrayList <Wizard> wizards = new ArrayList();
