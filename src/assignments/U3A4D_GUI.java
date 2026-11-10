@@ -1,4 +1,9 @@
 package assignments;
+import assignments.U3A4D_SearchApplication;
+import assignments.Wizard;
+import objects.Book;
+import assignments.U3A4D_UnsortedSearch;
+import assignments.U3A4DLoadFile;
 
 import java.awt.EventQueue;
 
@@ -7,8 +12,13 @@ import javax.swing.JLabel;
 import javax.swing.JButton;
 import javax.swing.JTextArea;
 import java.awt.Font;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class U3A4D_GUI {
+	
+	Wizard[] myWizard = Wizard.loadBooksFromFile("");
+
 
 	private JFrame frame;
 
@@ -16,6 +26,8 @@ public class U3A4D_GUI {
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
+		
+
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -70,6 +82,41 @@ public class U3A4D_GUI {
 		frame.getContentPane().add(lblNewLabel_5);
 		
 		JButton btnNewButton = new JButton("Search");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				String searchPattern = textArea.getText().trim();
+
+				if (searchPattern.equalsIgnoreCase("")) {
+					return;
+				}
+
+				int index = U3A4D_UnsortedSearch.searchHouse(wizardList, searchPattern, 0);
+
+				if (index == -1) {
+					index = U3A4D_UnsortedSearch.searchBlood(wizardList, searchPattern, 0);
+				}
+				if (index == -1) {
+					index = U3A4D_UnsortedSearch.searchWand(wizardList, searchPattern, 0);
+				}
+				if (index == -1) {
+					index = U3A4D_UnsortedSearch.searchLineage(wizardList, searchPattern, 0);
+				}
+
+				if (index != -1) {
+					Wizard w = wizardList[index];
+					textArea_1.setText(w.getIdentifier()); 
+					textArea_1_1.setText(w.getBlood());
+					textArea_1_2.setText(w.getWand());
+					textArea_1_3.setText(w.getLineage());
+				} else {
+					textArea_1.setText("Not Found");
+					textArea_1_1.setText("");
+					textArea_1_2.setText("");
+					textArea_1_3.setText("");
+				} 
+			} 
+		});
 		btnNewButton.setBounds(297, 57, 89, 23);
 		frame.getContentPane().add(btnNewButton);
 		
