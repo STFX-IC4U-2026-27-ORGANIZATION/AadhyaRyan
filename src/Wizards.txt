@@ -1,10 +1,10 @@
-Ravenclaw Half Holly
-Hufflepuff Muggle Vine
-Gryffindor Pure Rosewood
-Gryffindor Muggle Vine
-Slytherin Muggle Cedar
-Ravenclaw Half Redwood
-Slytherin Half Redwood
-Hufflepuff Pure Oak
-Gryffindor Pure Holly
-Ravenclaw Half Vine
+Ravenclaw Half Holly Abbot
+Hufflepuff Muggle Vine Flint
+Gryffindor Pure Rosewood Lestrange
+Gryffindor Muggle Vine Ollivander
+Slytherin Muggle Cedar Slughorn
+Ravenclaw Half Redwood Travers
+Slytherin Half Redwood Yaxley
+Hufflepuff Pure Oak Avery Macmillan
+Gryffindor Pure Holly Longbottom
+Ravenclaw Half Vine Malfoy
